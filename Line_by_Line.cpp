@@ -15,12 +15,7 @@ template<class T> bool minimize(T& a, const T& b) {
 
 /*==============================================*/
 
-const int N = 3e5 + 5;
-const long long MOD = 1e9 + 7;
-const long long INF = 1e9;
 
-int n;
-double p;
 
 double pw(double x, int y) {
     double ans = 1;
