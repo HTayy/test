@@ -30,15 +30,7 @@ void solve(int t) {
         minimize(tmp, x);
     }
 
-    if (n == 1) {
-        if (tmp > k) cout << "Case #" << t << ": NO \n";
-        else cout << "Case #" << t << ": YES \n";
-        
-        return ;
-    }
-
-    if (1LL * tmp * (2 * n - 3) > k) cout << "Case #" << t << ": NO \n";
-    else cout << "Case #" << t << ": YES \n";
+   
 }
 
 #define TASK "TASK"
@@ -55,5 +47,5 @@ int main()
 
     return 0;
 }
-//cccccccccccccccccccccc
+
 // louis97
