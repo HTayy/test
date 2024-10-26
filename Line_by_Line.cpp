@@ -9,11 +9,6 @@ template<class T> bool maximize(T& a, const T& b) {
     return a < b ? a = b, 1 : 0;
 }
  
-template<class T> bool minimize(T& a, const T& b) {
-    return a > b ? a = b, 1 : 0;
-}
-
-/*==============================================*/
 
 
 
