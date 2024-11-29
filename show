@@ -1,0 +1,71 @@
+[33mcommit d67e8c7498d00c63cb5f5fbd25aa8835509ec82a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: HTayy <h.huutay06@gmail.com>
+Date:   Sat Oct 26 20:34:36 2024 +0700
+
+    Update Line_by_Line.cpp
+
+[1mdiff --git a/Line_by_Line.cpp b/Line_by_Line.cpp[m
+[1mindex d3be1c2..8b13789 100644[m
+[1m--- a/Line_by_Line.cpp[m
+[1m+++ b/Line_by_Line.cpp[m
+[36m@@ -1,60 +1 @@[m
+[31m-#include<bits/stdc++.h>[m
+[31m-using namespace std;[m
+ [m
+[31m-#define MASK(i) (1LL << (i))[m
+[31m-#define BIT(x, i) (((x) >> (i)) & 1LL)[m
+[31m-#define ALL(v) (v).begin(), (v).end()[m
+[31m-[m
+[31m-template<class T> bool maximize(T& a, const T& b) {[m
+[31m-    return a < b ? a = b, 1 : 0;[m
+[31m-}[m
+[31m- [m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-double pw(double x, int y) {[m
+[31m-    double ans = 1;[m
+[31m-    double mul = x;[m
+[31m-    while (y > 0) {[m
+[31m-        if (y & 1) ans = 1. * ans * mul;[m
+[31m-        mul = 1. * mul * mul;[m
+[31m-[m
+[31m-        y >>= 1;[m
+[31m-    }[m
+[31m-[m
+[31m-    return ans;[m
+[31m-}[m
+[31m-[m
+[31m-void solve(int t) {[m
+[31m-    cin >> n >> p;[m
+[31m-    p = p / 100;[m
+[31m-    double tmp = pw(p, n - 1);[m
+[31m-[m
+[31m-    double l = 0, r = 100;[m
+[31m-    while (r - l > 0.00000000001) {[m
+[31m-        double mid = (l + r) / 2;[m
+[31m-        if (pw(mid, n) > tmp) r = mid;[m
+[31m-        else l = mid;[m
+[31m-    }[m
+[31m-[m
+[31m-    double ans = (r - p) * 100;[m
+[31m-[m
+[31m-    cout << "Case #" << t << ": " << fixed << setprecision(8) << ans << '\n';[m
+[31m-}[m
+[31m-[m
+[31m-#define TASK "TASK"[m
+[31m-int main()[m
+[31m-{[m
+[31m-    ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);[m
+[31m-    if(fopen(TASK".inp", "r")) {[m
+[31m-        freopen(TASK".inp", "r", stdin);[m
+[31m-        freopen(TASK".out", "w", stdout);[m
+[31m-    }[m
+[31m-[m
+[31m-    int t; cin >> t;[m
+[31m-    for (int i = 1; i <= t; i++) solve(i);[m
+[31m-[m
+[31m-    return 0;[m
+[31m-}[m
+[31m-[m
+[31m-// louis97[m
